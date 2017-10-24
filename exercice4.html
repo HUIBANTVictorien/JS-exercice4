@@ -5,17 +5,19 @@
   <meta charset="UTF-8">
 </head>
 <body>
-  <form name="form1">
+  <form>
     <label for="nom">Nom : </label><input type="text" name="nom" id="nom"/>
     <label for="prenom">Prénom : </label><input type="text" name="prenom" id="prenom"/>
     <label for="ville">Ville : </label><input type="text" name="ville" id="ville"/>
-    <button  name="valider" id="valider" onClick="controle(form)">Valider</button>
+    <button  name="valider" id="valider" onclick="display()">Valider</button>
     <script>
-    function controle(form1) {
-      var name = document.form1.nom.value;
-      var firstname = document.form1.prenom.value;
-      var city = document.form1.ville.value;
-      alert('Votre nom : ' + name +'\nVotre prénom : ' + firstname + '\nVous habitez : ' + city);
+    //fonction de récupération des éléments du formulaire
+    function display(){
+      var name = document.getElementById('nom').value;
+      var firstname = document.getElementById('prenom').value;
+      var city = document.getElementById('ville').value;
+      // affichage des valeurs récupérer en boite de dialogue.
+      alert('Nom : ' + name + '\nPrénom : ' + firstname + '\nVille : ' + city);
     }
     </script>
   </form>
