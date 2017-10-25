@@ -17,7 +17,9 @@
       var firstname = document.getElementById('prenom').value;
       var city = document.getElementById('ville').value;
       // affichage des valeurs récupérer en boite de dialogue.
-      alert('Nom : ' + name + '\nPrénom : ' + firstname + '\nVille : ' + city);
+      if(name && firstname && city && isNaN(nom) == true && isNaN(firstname) == true && isNaN(city) == true) {
+        alert('Nom : ' + name + '\nPrénom : ' + firstname + '\nVille : ' + city);
+      }
     }
     </script>
   </form>
